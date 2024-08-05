@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "outDir": "./dist"
+    },
+    "include": ["src", "src/types", "seeders"],
+    "exclude": ["node_modules"],
+    "typeRoots": [
+      "./node_module/@types",
+      "./src/types"],
+  }
+  
