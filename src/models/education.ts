@@ -2,32 +2,20 @@ import { Model, DataTypes } from "sequelize";
 import { sequelize } from "../config/database";
 import User from "./user";
 
-class Task extends Model {
+class Education extends Model {
   public id!: number;
-  public title!: string;
-  public description!: string;
-  public status!: string;
   public userId!: number;
+  public school!: string;
+  public fieldOfStudy!: string;
+  public endDate!: Date;
 }
 
-Task.init(
+Education.init(
   {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    status: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     userId: {
       type: DataTypes.INTEGER,
@@ -37,11 +25,23 @@ Task.init(
         key: "id",
       },
     },
+    school: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    fieldOfStudy: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    endDate: {
+      type: DataTypes.DATE,
+      allowNull: true,
+    },
   },
   {
     sequelize,
-    modelName: "Task",
+    modelName: "Education",
   }
 );
 
-export default Task;
+export default Education;

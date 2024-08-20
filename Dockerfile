@@ -1,23 +1,17 @@
 
+
+# Sử dụng node image làm base image
 FROM node:18-alpine
 
-
+# Tạo thư mục làm việc và copy code vào container
 WORKDIR /app
-
-
-COPY package*.json ./
-
-
-RUN npm install
-
-
 COPY . .
 
+# Cài đặt dependencies
+RUN npm install
 
-RUN npm run build
-
-
+# Expose port mà ứng dụng Node.js của bạn sẽ chạy
 EXPOSE 5000
 
-
-CMD ["npm", "start"]
+# Khởi động ứng dụng
+CMD [ "npm", "start"]

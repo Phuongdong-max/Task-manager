@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "password",
-    "database": "task_management_db_prod",
-    "host": "127.0.0.1",
+    "username": "freedb_task-user",
+    "password": "hvEGcM?X9jvQ5n5",
+    "database": "freedb_task-manager",
+    "host": "sql.freedb.tech",
     "dialect": "mysql"
   }
 }

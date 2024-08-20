@@ -6,7 +6,6 @@ import jwt from "jsonwebtoken";
 
 export const ggAuth = async (req: Request, res: Response) => {
   const { token } = req.body;
-  console.log(token);
 
   try {
     const response = await axios.post(
